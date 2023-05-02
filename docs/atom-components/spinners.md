@@ -17,7 +17,7 @@ title: Spinners
 
 <script>
     document.querySelectorAll(".mySpinnableButtons").forEach(el => {
-        const spinner = new AtomSpinnerElement(el)
+        const spinner = new AriseSpinnerElement(el)
 
         el.addEventListener('click', function () {
             spinner.spin('Please wait… ');
@@ -42,7 +42,7 @@ title: Spinners
 
 <script>
     const holder = document.getElementById('imageHolder');
-    const spinner = new AtomSpinnerElement(holder)
+    const spinner = new AriseSpinnerElement(holder)
 
     document.getElementById('loadUser').addEventListener('click', async function (ev) {
         spinner.spin('Please while we load the user… ');

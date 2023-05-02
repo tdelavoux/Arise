@@ -2,19 +2,19 @@
 layout: home
 
 hero:
-  name: Atom
+  name: Arise
   text:
   tagline: Yet another light front-end framework designed for faster web developments.
   image:
     src: /logo.png
-    alt: Atom Logo
+    alt: Arise Logo
   actions:
     - theme: brand
       text: Getting started
       link: /getting-started/introduction
     - theme: alt
       text: View on GitHub
-      link: https://github.com/tdelavoux/Atom
+      link: https://github.com/tdelavoux/Arise
 
 features:
   - icon: ⚡️

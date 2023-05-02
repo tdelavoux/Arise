@@ -9,7 +9,7 @@ function getCollapseTarget(source) {
 
   if (target === null) {
     console.warn(source);
-    throw new Error("Atom Collapse: no target found for this collapsable: " + (source.id ? source.id : source.textContent.trim()));
+    throw new Error("Arise Collapse: no target found for this collapsable: " + (source.id ? source.id : source.textContent.trim()));
   }
 
   return target;
@@ -40,10 +40,10 @@ a_after_dom_content_loaded(function () {
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
-class AtomCollapse {
+class AriseCollapse {
   constructor(el, customOptions) {
     if (!(el instanceof HTMLElement)) {
-      console.error("AtomCollapse: element is not a valid HTMLElement", el);
+      console.error("AriseCollapse: element is not a valid HTMLElement", el);
       return null;
     }
 
@@ -60,7 +60,7 @@ class AtomCollapse {
 
     if (!this.target instanceof HTMLElement) {
       console.error(
-        "AtomCollapse: Target element is not a valid HTMLElement",
+        "AriseCollapse: Target element is not a valid HTMLElement",
         this.target
       );
       return null;

@@ -20,11 +20,11 @@ These textareas come with an auto-resize feature, allowing the content to always
 ```html
 <script>
     // It is already automatically setup by default for all textarea on a page by calling this function
-    // AtomComponents.installCountAreaListeners();
+    // AriseComponents.installCountAreaListeners();
 
     // If you want to setup for one particular textarea
-    AtomComponents.installCountAreaListeners(document.getElementById('paragraph'));
-    AtomComponents.installCountAreaAutoResizeListener(document.getElementById('paragraph'));
+    AriseComponents.installCountAreaListeners(document.getElementById('paragraph'));
+    AriseComponents.installCountAreaAutoResizeListener(document.getElementById('paragraph'));
 </script>
 ```
 

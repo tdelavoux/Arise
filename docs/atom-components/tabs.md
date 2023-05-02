@@ -1,5 +1,5 @@
 ---
-title: Atom Tabs
+title: Arise Tabs
 ---
 
 # {{ $frontmatter.title }}
@@ -9,19 +9,19 @@ title: Atom Tabs
 <PreviewAndCopyCode>
 
 ```html
-<div class="atom-pan-tab">
-  <div class="atom-pan-tab-header a-tab-primary">
-    <span class="atom-pan-tab-header-item active" data-target="#one-one">
+<div class="arise-pan-tab">
+  <div class="arise-pan-tab-header a-tab-primary">
+    <span class="arise-pan-tab-header-item active" data-target="#one-one">
       <i class="fas fa-shopping-cart"></i> Shopping
     </span>
-    <span class="atom-pan-tab-header-item" data-target="#one-two">
+    <span class="arise-pan-tab-header-item" data-target="#one-two">
       <i class="fas fa-book"></i> Education
     </span>
-    <span class="atom-pan-tab-header-item" data-target="#one-three">
+    <span class="arise-pan-tab-header-item" data-target="#one-three">
       <i class="fas fa-music"></i> Music
     </span>
   </div>
-  <div class="atom-pan-tab-body">
+  <div class="arise-pan-tab-body">
     <div id="one-one" class="active">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti saepe
       illo dolore ad quod esse laboriosam, nemo tempora, maxime perferendis
@@ -48,19 +48,19 @@ And in another color:
 <PreviewAndCopyCode>
 
 ```html
-<div class="atom-pan-tab">
-  <div class="atom-pan-tab-header a-tab-info">
-    <span class="atom-pan-tab-header-item active" data-target="#two-one">
+<div class="arise-pan-tab">
+  <div class="arise-pan-tab-header a-tab-info">
+    <span class="arise-pan-tab-header-item active" data-target="#two-one">
       <i class="fas fa-shopping-cart"></i> Shopping
     </span>
-    <span class="atom-pan-tab-header-item" data-target="#two-two">
+    <span class="arise-pan-tab-header-item" data-target="#two-two">
       <i class="fas fa-book"></i> Education
     </span>
-    <span class="atom-pan-tab-header-item" data-target="#two-three">
+    <span class="arise-pan-tab-header-item" data-target="#two-three">
       <i class="fas fa-music"></i> Music
     </span>
   </div>
-  <div class="atom-pan-tab-body">
+  <div class="arise-pan-tab-body">
     <div id="two-one" class="active">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti saepe
       illo dolore ad quod esse laboriosam, nemo tempora, maxime perferendis

@@ -1,7 +1,7 @@
-class AtomSpinnerElement {
+class AriseSpinnerElement {
   constructor(el) {
     if (!(el instanceof HTMLElement)) {
-      console.error("AtomSpinnerElement: element is not a valid HTMLElement", el);
+      console.error("AriseSpinnerElement: element is not a valid HTMLElement", el);
       return null;
     }
 
@@ -30,4 +30,4 @@ class AtomSpinnerElement {
   }
 }
 
-window.AtomSpinnerElement = AtomSpinnerElement;
+window.AriseSpinnerElement = AriseSpinnerElement;

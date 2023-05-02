@@ -8,7 +8,7 @@ const A_TEXTAREA_MAXLENGTH_DEFAULT = 500;
  * Défini un compteur automatique de caractères restant pour un texte area donné.
  * La taille max est basée sur l'attribut maxlength de la textArea. Par défaut, la valeur est à 500;
  */
-class AtomComponents {
+class AriseComponents {
   static installCountAreaListeners() {
     document.querySelectorAll(".a-count-area>textarea").forEach((textarea) => {
       console.debug("[ATOM] Setting up countarea listeners for ", textarea);
@@ -46,6 +46,6 @@ class AtomComponents {
   }
 }
 
-AtomComponents.installCountAreaListeners();
+AriseComponents.installCountAreaListeners();
 
-window.AtomComponents = AtomComponents;
+window.AriseComponents = AriseComponents;

@@ -1,10 +1,10 @@
-class AtomShuffleInstance {
+class AriseShuffleInstance {
   constructor(el, customClass = null) {
     if (!(el instanceof HTMLElement)) {
-      console.error("AtomShuffleInstance: element is not a valid HTMLElement", el);
+      console.error("AriseShuffleInstance: element is not a valid HTMLElement", el);
       return null;
     }
-    var className = customClass && (typeof customClass === "string" || customClass instanceof String) ? customClass : "atomShuffleItem";
+    var className = customClass && (typeof customClass === "string" || customClass instanceof String) ? customClass : "ariseShuffleItem";
     el.addEventListener("keyup", function () {
       const val = el.value.toLowerCase();
       const items = document.getElementsByClassName(className);
@@ -19,10 +19,10 @@ class AtomShuffleInstance {
   }
 }
 
-class AtomShuffle {
+class AriseShuffle {
   constructor(customOptions) {
     this.options = {
-      itemSelector: "atomShuffleItem",
+      itemSelector: "ariseShuffleItem",
       animationTime: 500,
       visibility: false,
     };
@@ -41,5 +41,5 @@ class AtomShuffle {
     delete this;
   }
 }
-window.AtomShuffleInstance = AtomShuffleInstance;
-window.AtomShuffle = AtomShuffle;
+window.AriseShuffleInstance = AriseShuffleInstance;
+window.AriseShuffle = AriseShuffle;

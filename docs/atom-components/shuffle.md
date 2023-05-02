@@ -4,11 +4,11 @@ title: Shuffle
 
 # {{ $frontmatter.title }}
 
-Atom Shuffle provide a 💪 performant and 🧠 simple item's filter. Used by AtomDatatable, it remains efficient with large data corpus.
+Arise Shuffle provide a 💪 performant and 🧠 simple item's filter. Used by AriseDatatable, it remains efficient with large data corpus.
 
 ## Basic Usage
 
-You can instanciate quickly a shuffler giving it the input used and optionnaly a class (atomShuffleItem by default) used to identify items `new AtomShuffleInstance(htmlElement, classIdentifier)`
+You can instanciate quickly a shuffler giving it the input used and optionnaly a class (ariseShuffleItem by default) used to identify items `new AriseShuffleInstance(htmlElement, classIdentifier)`
 
 <PreviewAndCopyCode>
 
@@ -21,22 +21,22 @@ You can instanciate quickly a shuffler giving it the input used and optionnaly a
 </div>
 
 <div class="a-docs-example-line">
-  <div class="a-fantom-card a-docs-card atomShuffleItem" data-title="Sea" style="background-image:url('https://picsum.photos/id/16/200');">
+  <div class="a-fantom-card a-docs-card ariseShuffleItem" data-title="Sea" style="background-image:url('https://picsum.photos/id/16/200');">
     <span class="mask"></span>
     <span class="title">Sea</span>
   </div>
 
-  <div class="a-fantom-card a-docs-card atomShuffleItem" data-title="Desert" style="background-image:url('https://picsum.photos/id/46/200');">
+  <div class="a-fantom-card a-docs-card ariseShuffleItem" data-title="Desert" style="background-image:url('https://picsum.photos/id/46/200');">
     <span class="mask"></span>
     <span class="title">Desert</span>
   </div>
 
-  <div class="a-fantom-card a-docs-card atomShuffleItem" data-title="City" style="background-image:url('https://picsum.photos/id/57/200');">
+  <div class="a-fantom-card a-docs-card ariseShuffleItem" data-title="City" style="background-image:url('https://picsum.photos/id/57/200');">
     <span class="mask"></span>
     <span class="title">City</span>
   </div>
 
-  <div class="a-fantom-card a-docs-card atomShuffleItem" data-title="Forest" style="background-image:url('https://picsum.photos/id/412/200');">
+  <div class="a-fantom-card a-docs-card ariseShuffleItem" data-title="Forest" style="background-image:url('https://picsum.photos/id/412/200');">
     <span class="mask"></span>
     <span class="title">Forest</span>
   </div>
@@ -46,7 +46,7 @@ You can instanciate quickly a shuffler giving it the input used and optionnaly a
 
 ```html
 <script>
-    new AtomShuffleInstance(document.getElementById("shuffleInput"), "atomShuffleItem");
+    new AriseShuffleInstance(document.getElementById("shuffleInput"), "ariseShuffleItem");
 </script>
 ```
 
@@ -54,7 +54,7 @@ You can instanciate quickly a shuffler giving it the input used and optionnaly a
 
 ## Customize and Rules
 
-The `AtomShuffle` component will allow you to define when to trigger a shuffle and the rules using the options as Object `new AtomShuffleInstance(Options)`.
+The `AriseShuffle` component will allow you to define when to trigger a shuffle and the rules using the options as Object `new AriseShuffleInstance(Options)`.
 
 In the example below you may search by matching names and by category
 
@@ -126,7 +126,7 @@ In the example below you may search by matching names and by category
 <script>
 
     // Create Shuffler
-    const shuffler = new AtomShuffle({
+    const shuffler = new AriseShuffle({
         itemSelector : "customShuffleIdentifier",
         animationTime: 300,
     });
@@ -156,10 +156,10 @@ In the example below you may search by matching names and by category
 
 ### Shuffle Options
 
-Options should be passed to AtomShuffle's constructor as Object (see exemple above)
+Options should be passed to AriseShuffle's constructor as Object (see exemple above)
 
 | Name                  | Type              | Description                                                                                              | Default Value             |
 | -------------------   | ----------------- | -------------------------------------------------------------------------------------------------------- | ------------------------- |
-| itemSelector          | string            | class to identify elements to shuffle                                                                    | atomShuffleItem           |
+| itemSelector          | string            | class to identify elements to shuffle                                                                    | ariseShuffleItem           |
 | animationTime         | integer           | Animation time (both show and hide)                                                                      | true                      |
 | visibility            | boolean           | ignore current visibility test of element                                                                | false                     |

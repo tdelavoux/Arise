@@ -1,7 +1,7 @@
 const a_direction = ["asc", "desc"];
 const a_types = ["string", "number", "Ymd", "m/d/Y", "m-d-y", "d/m/Y", "d-m-y"];
 
-class AtomDatatable {
+class AriseDatatable {
   /**
    * Construct the object and initialize table with dependecies
    * @param {HTMLElement} table
@@ -12,7 +12,7 @@ class AtomDatatable {
   constructor(table, customOptions) {
     if (!(table instanceof HTMLTableElement)) {
       console.error(
-        "AtomDatatable: Can only initialize on a HTMLTableElement, not on ",
+        "AriseDatatable: Can only initialize on a HTMLTableElement, not on ",
         table
       );
       return null;
@@ -69,7 +69,7 @@ class AtomDatatable {
   instantiateTableHeader() {
     const header = document.createElement("div");
     header.classList.add("a-table-header", "ta-r");
-    header.id = `atom-table-header-${this.tableid}`;
+    header.id = `arise-table-header-${this.tableid}`;
     this.header = header;
     this.table.before(this.header);
   }
@@ -80,7 +80,7 @@ class AtomDatatable {
   instantiateTableFooter() {
     const footer = document.createElement("div");
     footer.classList.add("a-table-footer", "flex", "ai-c", "jc-sb");
-    footer.id = `atom-table-footer-${this.tableid}`;
+    footer.id = `arise-table-footer-${this.tableid}`;
     this.footer = footer;
     this.table.after(this.footer);
   }
@@ -122,7 +122,7 @@ class AtomDatatable {
     }
 
     const paginationText = document.createElement("div");
-    paginationText.id = `atom-table-footer-text-${
+    paginationText.id = `arise-table-footer-text-${
       this.options.paginationText ? this.tableid : ""
     }`;
 
@@ -135,13 +135,13 @@ class AtomDatatable {
    */
   instantiateRowsClass() {
     for (var row of this.table.querySelectorAll(
-      `tbody tr:not(.atom-tr-${this.tableid}`
+      `tbody tr:not(.arise-tr-${this.tableid}`
     ))
-      row.classList.add(`atom-tr-${this.tableid}`);
+      row.classList.add(`arise-tr-${this.tableid}`);
   }
 
   /**
-   * Add Atom shuffle input for row search
+   * Add Arise shuffle input for row search
    */
   instantiateInputShuffle() {
     const searchGroup = document.createElement("div");
@@ -152,14 +152,14 @@ class AtomDatatable {
     const searchInput = document.createElement("input");
     searchInput.classList.add("a-input");
     !!this.inputSearchClass && searchInput.classList.add(this.inputSearchClass);
-    searchInput.id = `atom-search-${this.tableid}`;
+    searchInput.id = `arise-search-${this.tableid}`;
     this.inputSearch = searchInput;
 
     searchGroup.append(searchIcon, searchInput);
 
     this.header.append(searchGroup);
-    const shuffler = new AtomShuffle({
-      itemSelector: `atom-tr-${this.tableid}`,
+    const shuffler = new AriseShuffle({
+      itemSelector: `arise-tr-${this.tableid}`,
       animationTime: 200,
     });
 
@@ -197,7 +197,7 @@ class AtomDatatable {
         "th:nth-child(" + (colNumber + 1) + ")"
       );
       if (!column) {
-        console.warn(`Atom DataTable : Column ${colNumber} do not exist`);
+        console.warn(`Arise DataTable : Column ${colNumber} do not exist`);
         return;
       }
       column.classList.add(this.sortClass);
@@ -305,7 +305,7 @@ class AtomDatatable {
   sortNumber(rows, value, ascending) {
     rows.sort(function (a, b) {
       if (isNaN(a.children[value].innerHTML) || isNaN(b.children[value].innerHTML)) {
-        AtomDatatable.throwError(value, rows);
+        AriseDatatable.throwError(value, rows);
       }
 
       if (ascending) {
@@ -516,7 +516,7 @@ class AtomDatatable {
         : row.classList.remove("a-hide");
       counter++;
     });
-    var btns = document.getElementById("atom-table-footer-"+this.tableid).querySelectorAll('.a-paginate-btn');
+    var btns = document.getElementById("arise-table-footer-"+this.tableid).querySelectorAll('.a-paginate-btn');
     btns.forEach(btn => { 
       if(btn.dataset.index >= pageNumber){
         btn.classList.add('a-hide');
@@ -603,4 +603,4 @@ class AtomDatatable {
   }
 }
 
-window.AtomDatatable = AtomDatatable;
+window.AriseDatatable = AriseDatatable;

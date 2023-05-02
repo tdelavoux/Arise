@@ -2,7 +2,7 @@
 
 Pre-flight checklist
 
-- [ ] PR name follows standards defined in the [Contributing Guideline](https://github.com/tdelavoux/Atom/blob/main/README.md)
+- [ ] PR name follows standards defined in the [Contributing Guideline](https://github.com/tdelavoux/Arise/blob/main/README.md)
 - [ ] If this PR is not ready yet for review, please mark it as [draft PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests)
 
 -->

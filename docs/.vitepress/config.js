@@ -2,23 +2,23 @@
  * @type {import('vitepress').UserConfig}
  */
 export default {
-  lang: "en-US",
-  title: "Atom",
-  description:
+  lang       : "en-US",
+  title      : "Arise",
+  description: 
     "Yet another light front-end framework designed for faster web developments.",
 
   lastUpdated: true,
 
   themeConfig: {
-    siteTitle: "Atom Documentation",
-    logo: "/logo.png",
-    nav: getNav(),
-    sidebar: getSidebar(),
-    editLink: {
-      pattern: "https://github.com/Atom-Fundation/Atom/edit/main/docs/:path",
+    siteTitle: "Arise Documentation",
+    logo     : "/logo.png",
+    nav      : getNav(),
+    sidebar  : getSidebar(),
+    editLink : {
+      pattern: "https://github.com/Arise-Fundation/Arise/edit/main/docs/:path",
     },
     socialLinks: [
-      { icon: "github", link: "https://github.com/Atom-Fundation/Atom" },
+      { icon: "github", link: "https://github.com/Arise-Fundation/Arise" },
     ],
     footer: {
       // message: '',
@@ -30,51 +30,51 @@ export default {
 function getSidebar() {
   return [
     {
-      text: "Getting started",
+      text : "Getting started",
       items: [
         { text: "Introduction", link: "/getting-started/introduction" },
         { text: "Installation", link: "/getting-started/installation" },
       ],
     },
     {
-      text: "Atom Components",
+      text       : "Arise Components",
       collapsible: true,
-      items: [
-        { text: "Buttons", link: "/atom-components/buttons" },
+      items      : [
+        { text: "Buttons", link: "/arise-components/buttons" },
         {
           text: "Form elements", items: [
-            { text: "Inputs", link: "/atom-components/inputs" },
-            { text: "Radios & Checks", link: "/atom-components/radios-and-checks" },
-            { text: "Automatic textarea", link: "/atom-components/form-elements" },
+            { text: "Inputs", link: "/arise-components/inputs" },
+            { text: "Radios & Checks", link: "/arise-components/radios-and-checks" },
+            { text: "Automatic textarea", link: "/arise-components/form-elements" },
           ]
         },
-        { text: "Tags", link: "/atom-components/tags" },
-        { text: "Images", link: "/atom-components/images" },
-        { text: "Alerts", link: "/atom-components/alerts" },
-        { text: "Tabs", link: "/atom-components/tabs" },
-        { text: "Panels", link: "/atom-components/panels" },
-        { text: "Spinners", link: "/atom-components/spinners" },
-        { text: "Shuffle", link: "/atom-components/shuffle" },
-        { text: "Notifications", link: "/atom-components/notifications" },
-        { text: "Tables", link: "/atom-components/tables" },
-        { text: "Timeline", link: "/atom-components/timeline" },
+        { text: "Tags", link: "/arise-components/tags" },
+        { text: "Images", link: "/arise-components/images" },
+        { text: "Alerts", link: "/arise-components/alerts" },
+        { text: "Tabs", link: "/arise-components/tabs" },
+        { text: "Panels", link: "/arise-components/panels" },
+        { text: "Spinners", link: "/arise-components/spinners" },
+        { text: "Shuffle", link: "/arise-components/shuffle" },
+        { text: "Notifications", link: "/arise-components/notifications" },
+        { text: "Tables", link: "/arise-components/tables" },
+        { text: "Timeline", link: "/arise-components/timeline" },
       ],
     },
     {
-      text: "Atom Utilities",
+      text       : "Arise Utilities",
       collapsible: true,
-      items: [
-        { text: "Collapse", link: "/atom-utilities/collapse" },
-        { text: "FormHandler", link: "/atom-utilities/formhandler" },
-        { text: "Colors", link: "/atom-utilities/colors" },
-        { text: "Spacing", link: "/atom-utilities/spacing" },
-        { text: "Texts", link: "/atom-utilities/texts" },
+      items      : [
+        { text: "Collapse", link: "/arise-utilities/collapse" },
+        { text: "FormHandler", link: "/arise-utilities/formhandler" },
+        { text: "Colors", link: "/arise-utilities/colors" },
+        { text: "Spacing", link: "/arise-utilities/spacing" },
+        { text: "Texts", link: "/arise-utilities/texts" },
       ],
     },
     {
-      text: "Advanced",
+      text       : "Advanced",
       collapsible: true,
-      items: [
+      items      : [
         { text: "Customize", link: "/advanced/customize" },
       ],
     },
@@ -84,9 +84,9 @@ function getSidebar() {
 function getNav() {
   return [
     {
-      text: "Atom Components",
-      link: "/atom-components/buttons",
-      activeMatch: "/atom-components/.*",
+      text       : "Arise Components",
+      link       : "/arise-components/buttons",
+      activeMatch: "/arise-components/.*",
     },
     { text: "Contributing", link: "/contributing/documentation" },
     { text: "The team", link: "/team" },

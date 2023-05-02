@@ -1,4 +1,4 @@
-class AtomAnimation {
+class AriseAnimation {
   static animTime = 500;
   static visibleX = { transform: "translateX(0px)", opacity: "1" };
   static visibleY = { transform: "translateY(0px)", opacity: "1" };

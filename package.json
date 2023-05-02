@@ -1,10 +1,10 @@
 {
-  "name": "atom",
+  "name": "arise",
   "version": "0.3.0-dev",
   "description": "Small CSS and JS librairies ",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tdelavoux/Atom.git"
+    "url": "git+https://github.com/tdelavoux/arise.git"
   },
   "keywords": [
     "css",
@@ -13,9 +13,9 @@
   ],
   "author": "Thibault Delavoux <thibault.delavoux@gmail.com>",
   "bugs": {
-    "url": "https://github.com/tdelavoux/Atom/issues"
+    "url": "https://github.com/tdelavoux/arise/issues"
   },
-  "homepage": "https://github.com/tdelavoux/Atom#readme",
+  "homepage": "https://github.com/tdelavoux/arise#readme",
   "scripts": {
     "clean": "rm -rvf dist/",
     "build": "grunt",

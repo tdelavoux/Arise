@@ -4,7 +4,7 @@ title: Radios & Checks
 
 # {{ $frontmatter.title }}
 
-## Atom Radio Buttons
+## Arise Radio Buttons
 
 <PreviewAndCopyCode>
 
@@ -50,7 +50,7 @@ title: Radios & Checks
 </PreviewAndCopyCode>
 
 
-## Atom Checkboxes
+## Arise Checkboxes
 
 <PreviewAndCopyCode>
 

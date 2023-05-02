@@ -1,4 +1,4 @@
-class AtomFile {
+class AriseFile {
   constructor(el) {
     if (HTMLCollection.prototype.isPrototypeOf(el)) {
       Array.from(el).forEach((elem) => {
@@ -11,7 +11,7 @@ class AtomFile {
 
   initialize(el) {
     if (!(el instanceof HTMLInputElement)) {
-      console.error("AtomFile: cannot instanciate, element is not a valid HTMLInputElement", el);
+      console.error("AriseFile: cannot instanciate, element is not a valid HTMLInputElement", el);
       return null;
     }
     const label = el.closest("label");
@@ -30,7 +30,7 @@ class AtomFile {
     });
   }
 }
-class AtomFileDrop {
+class AriseFileDrop {
   constructor(el) {
     if (HTMLCollection.prototype.isPrototypeOf(el)) {
       Array.from(el).forEach((elem) => {
@@ -43,7 +43,7 @@ class AtomFileDrop {
 
   initialize(el) {
     if (!(el instanceof HTMLElement)) {
-      console.error("AtomFile: cannot instanciate, element is not a valid HTMLElement", el);
+      console.error("AriseFile: cannot instanciate, element is not a valid HTMLElement", el);
       return null;
     }
 
@@ -75,5 +75,5 @@ class AtomFileDrop {
     });
   }
 }
-window.AtomFile = AtomFile;
-window.AtomFileDrop = AtomFileDrop;
+window.AriseFile = AriseFile;
+window.AriseFileDrop = AriseFileDrop;

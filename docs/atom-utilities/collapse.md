@@ -4,7 +4,7 @@ title: Collapse
 
 # {{ $frontmatter.title }}
 
-You can use Atom Collapse to hide elements when a button is clicked.
+You can use Arise Collapse to hide elements when a button is clicked.
 
 <PreviewAndCopyCode>
 
@@ -23,7 +23,7 @@ You can use Atom Collapse to hide elements when a button is clicked.
 
 </PreviewAndCopyCode>
 
-`a-collapse-target-id` is optional: if unset, Atom Collapse will select the sibling following the `.a-collapse-trigger` element.
+`a-collapse-target-id` is optional: if unset, Arise Collapse will select the sibling following the `.a-collapse-trigger` element.
 
 <PreviewAndCopyCode>
 

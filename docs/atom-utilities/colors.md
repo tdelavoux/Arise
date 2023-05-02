@@ -22,7 +22,7 @@ title: Colors
 
 ## Custom colors
 
-All elements colors might be overwrited by changing Atom css var but be aware this action will influence all of the components sharing same type (primary, secondary ... etc).
+All elements colors might be overwrited by changing Arise css var but be aware this action will influence all of the components sharing same type (primary, secondary ... etc).
 
 Please, check the [Customize section](../advanced/customize) for more informations
 

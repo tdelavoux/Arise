@@ -43,7 +43,7 @@ const members = [
       Our Team
     </template>
     <template #lead>
-      The development of Atom is pushed by these people, when they feel they are in the mood
+      The development of Arise is pushed by these people, when they feel they are in the mood
     </template>
   </VPTeamPageTitle>
   <VPTeamMembers

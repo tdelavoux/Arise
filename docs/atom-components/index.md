@@ -1,5 +1,5 @@
 ---
-title: Atom Components
+title: Arise Components
 ---
 
 # {{ $frontmatter.title }}

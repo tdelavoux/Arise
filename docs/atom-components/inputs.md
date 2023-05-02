@@ -10,7 +10,7 @@ title: Inputs
 
 ```html
 <div class="a-fantom-card mw-400 pl-2 pr-2">
-    <h4 class="center">Atom Form</h4>
+    <h4 class="center">Arise Form</h4>
     <div class="a-input-group">
         <input class="a-input" placeholder="Michel Del Pêche" />
         <label><i class="far fa-address-card"></i>Text</label>
@@ -67,7 +67,7 @@ title: Inputs
 
 ```html
 <div class="a-fantom-card mw-400 pl-2 pr-2">
-    <h4 class="center">Atom Form</h4>
+    <h4 class="center">Arise Form</h4>
     <div class="a-input-group">
         <input class="a-input a-borderless" placeholder="Michel Del Pêche" />
         <label><i class="far fa-address-card"></i>Text</label>
@@ -124,7 +124,7 @@ title: Inputs
 
 ```html
 <div class="a-fantom-card mw-400 pl-2 pr-2">
-    <h4 class="center">Atom Form</h4>
+    <h4 class="center">Arise Form</h4>
     <div class="a-input-group">
         <input class="a-input a-material-input" placeholder="Michel Del Pêche" />
         <label><i class="far fa-address-card"></i>Text</label>
@@ -180,7 +180,7 @@ title: Inputs
 
 ```html
 <div class="a-fantom-card mw-400 pl-2 pr-2">
-    <h4 class="center">Atom Form</h4>
+    <h4 class="center">Arise Form</h4>
     
     <div class="a-input-group">
         <label class="a-input a-input-label-file">
@@ -212,7 +212,7 @@ title: Inputs
 </div>
     
 <script>
-    new AtomFile(document.getElementsByClassName('a-input-file'));
+    new AriseFile(document.getElementsByClassName('a-input-file'));
 </script>
 ```
 
@@ -241,7 +241,7 @@ title: Inputs
 </div>
     
 <script>
-    new AtomFileDrop(document.getElementsByClassName('a-file-drop'));
+    new AriseFileDrop(document.getElementsByClassName('a-file-drop'));
 </script>
 ```
 

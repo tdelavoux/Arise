@@ -68,7 +68,7 @@ function a_RandomString() {
  */
 function a_toggle(element, ms = null) {
   if (!(element instanceof HTMLElement)) {
-    console.warn("Atom Toggle: Element is not a valid HTMLElement", element);
+    console.warn("Arise Toggle: Element is not a valid HTMLElement", element);
     return;
   }
 
@@ -87,14 +87,14 @@ function a_toggle(element, ms = null) {
  * @returns {void}
  */
 function a_hide(element, ms = 400) {
-  if (AtomAnimation.a_isAnimated(element)) {
+  if (AriseAnimation.a_isAnimated(element)) {
     setTimeout(() => a_hide(element, ms), ms);
     return;
   }
   if (!a_isVisible(element)) {
     return;
   }
-  AtomAnimation.fadeOut(element, ms);
+  AriseAnimation.fadeOut(element, ms);
   setTimeout(() => {
     element.style.display = "none";
   }, ms);
@@ -107,14 +107,14 @@ function a_hide(element, ms = 400) {
  * @returns {void}
  */
 function a_show(element, ms = 500) {
-  if (AtomAnimation.a_isAnimated(element)) {
+  if (AriseAnimation.a_isAnimated(element)) {
     setTimeout(() => a_show(element, ms), ms);
     return;
   }
   if (a_isVisible(element)) {
     return;
   }
-  AtomAnimation.fadeIn(element, ms);
+  AriseAnimation.fadeIn(element, ms);
   element.style.display = null;
 }
 
@@ -124,8 +124,8 @@ function a_after_dom_content_loaded(callback) {
     document.addEventListener("DOMContentLoaded", callback);
     return;
   }
-  // Custom event for hot reload on Atom's documentation
-  document.addEventListener("AtomDocumentationSetupListeners", callback);
+  // Custom event for hot reload on Arise's documentation
+  document.addEventListener("AriseDocumentationSetupListeners", callback);
 
   // `DOMContentLoaded` has already fired
   callback();

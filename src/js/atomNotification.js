@@ -1,4 +1,4 @@
-class AtomNotificationWrapper {
+class AriseNotificationWrapper {
   static globalConfig = {
     maxElements: null,
   };
@@ -21,23 +21,23 @@ class AtomNotificationWrapper {
     },
   };
   static wrappers = {
-    id: "atomNotify-wrapper-",
+    id: "ariseNotify-wrapper-",
     style: "position:fixed;z-index:99999;pointer-events:none;",
   };
 
   constructor(position) {
     const wrapper = document.createElement("div");
-    this.localConfig = AtomNotificationWrapper.globalConfig;
-    wrapper.setAttribute("id", AtomNotificationWrapper.wrappers.id + position);
-    wrapper.style.cssText = AtomNotificationWrapper.wrappers.style;
-    for (const [key, value] of Object.entries(AtomNotificationWrapper.globalAlignments[position])) {
+    this.localConfig = AriseNotificationWrapper.globalConfig;
+    wrapper.setAttribute("id", AriseNotificationWrapper.wrappers.id + position);
+    wrapper.style.cssText = AriseNotificationWrapper.wrappers.style;
+    for (const [key, value] of Object.entries(AriseNotificationWrapper.globalAlignments[position])) {
       wrapper.style[key] = value;
     }
     document.body.appendChild(wrapper);
     this.element = wrapper;
   }
   static getWrapper(position) {
-    var key = position in AtomNotificationWrapper.globalAlignments ? position : "tr";
+    var key = position in AriseNotificationWrapper.globalAlignments ? position : "tr";
     return (this.element = document.getElementById(this.wrappers.id + key) ?? new this(key));
   }
   static setGlobalConfig(config) {
@@ -54,7 +54,7 @@ class AtomNotificationWrapper {
   }
 }
 
-class AtomNotification {
+class AriseNotification {
   static globalConfig = {
     clickToHide: true,
     autoHide: true,
@@ -85,12 +85,12 @@ class AtomNotification {
   constructor(text = "This is a notification", localConfig) {
     const loc = typeof localConfig === "string" ? { type: localConfig } : localConfig;
     this.localConfig = {
-      ...AtomNotification.globalConfig,
+      ...AriseNotification.globalConfig,
       ...loc,
     };
-    AtomNotification.wrappers[this.localConfig.alignment] =
-      AtomNotification.wrappers[this.localConfig.alignment] ?? AtomNotificationWrapper.getWrapper(this.localConfig.alignment);
-    this.wrappers = AtomNotification.wrappers;
+    AriseNotification.wrappers[this.localConfig.alignment] =
+      AriseNotification.wrappers[this.localConfig.alignment] ?? AriseNotificationWrapper.getWrapper(this.localConfig.alignment);
+    this.wrappers = AriseNotification.wrappers;
     this.text = text;
     this.show();
   }
@@ -101,32 +101,32 @@ class AtomNotification {
     if (this.localConfig.htmlEnable) {
       element.innerHTML = this.text;
     }
-    element.style.cssText = AtomNotification.styles.commun;
-    element.classList.add("atom-notification-content");
+    element.style.cssText = AriseNotification.styles.commun;
+    element.classList.add("arise-notification-content");
     if (typeof this.localConfig.customClass === "string") {
       this.localConfig.customClass.split(" ").forEach((el) => {
         element.classList.add(el);
       });
     } else if (this.localConfig.customClass !== null) {
-      console.error("AtomNotification: wrong type in customClass. String expected");
+      console.error("AriseNotification: wrong type in customClass. String expected");
     }
 
     switch (this.localConfig.alignment) {
       case "tr":
       case "br":
-        AtomAnimation.slideRightIn(element, this.localConfig.showAnimationTime);
+        AriseAnimation.slideRightIn(element, this.localConfig.showAnimationTime);
         break;
       case "tl":
       case "bl":
       default:
-        AtomAnimation.slideLeftIn(element, this.localConfig.showAnimationTime);
+        AriseAnimation.slideLeftIn(element, this.localConfig.showAnimationTime);
         break;
     }
 
-    AtomNotification.styles[this.localConfig.type].forEach((className) => element.classList.add(className));
-    const alignment = AtomNotification.acceptedAlignment.includes(this.localConfig.alignment)
+    AriseNotification.styles[this.localConfig.type].forEach((className) => element.classList.add(className));
+    const alignment = AriseNotification.acceptedAlignment.includes(this.localConfig.alignment)
       ? this.localConfig.alignment
-      : AtomNotification.globalConfig.alignment;
+      : AriseNotification.globalConfig.alignment;
     this.wrappers[alignment].insertNotification(element);
     if (this.localConfig.autoHide) {
       setTimeout(() => this.destroy(element), this.localConfig.autoHideDelay);
@@ -138,12 +138,12 @@ class AtomNotification {
     switch (this.localConfig.alignment) {
       case "tr":
       case "br":
-        AtomAnimation.slideRightOut(element, this.localConfig.hideAnimationDuration);
+        AriseAnimation.slideRightOut(element, this.localConfig.hideAnimationDuration);
         break;
       case "tl":
       case "bl":
       default:
-        AtomAnimation.slideLeftOut(element, this.localConfig.hideAnimationDuration);
+        AriseAnimation.slideLeftOut(element, this.localConfig.hideAnimationDuration);
         break;
     }
 
@@ -151,7 +151,7 @@ class AtomNotification {
   }
 
   static trigger(text, style) {
-    new AtomNotification(text, style).show();
+    new AriseNotification(text, style).show();
   }
 
   static setGlobalConfiguration(config) {
@@ -171,5 +171,5 @@ class AtomNotification {
   }
 }
 
-window.AtomNotificationWrapper = AtomNotificationWrapper;
-window.AtomNotification = AtomNotification;
+window.AriseNotificationWrapper = AriseNotificationWrapper;
+window.AriseNotification = AriseNotification;

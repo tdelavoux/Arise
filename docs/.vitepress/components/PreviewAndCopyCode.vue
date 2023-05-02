@@ -24,14 +24,14 @@ export default {
           eval(script.textContent);
         }
 
-        window.document.dispatchEvent(new Event("AtomDocumentationSetupListeners"));
+        window.document.dispatchEvent(new Event("AriseDocumentationSetupListeners"));
       },
     };
   },
   async mounted() {
-    console.info("[PREVIEW] Loading built Atom JS");
-    await import("../../../dist/latest/js/atom-all.min.js");
-    console.info("[PREVIEW] Atom JS loaded");
+    console.info("[PREVIEW] Loading built Arise JS");
+    await import("../../../dist/latest/js/arise-all.min.js");
+    console.info("[PREVIEW] Arise JS loaded");
 
     this.setupHtmlAndJs();
   },

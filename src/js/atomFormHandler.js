@@ -26,11 +26,11 @@ Array.from(document.getElementsByClassName("a-form-handler")).forEach(
   }
 );
 
-class AtomFormHandler {
+class AriseFormHandler {
   static setupListeners(rootElement) {
     [...rootElement.querySelectorAll(".a-form-handler")].forEach((el) => {
-      el.removeEventListener("click", AtomFormHandler.controlListener, false);
-      el.addEventListener("click", AtomFormHandler.controlListener, false);
+      el.removeEventListener("click", AriseFormHandler.controlListener, false);
+      el.addEventListener("click", AriseFormHandler.controlListener, false);
     });
   }
 
@@ -44,10 +44,10 @@ class AtomFormHandler {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  AtomFormHandler.setupListeners(document);
+  AriseFormHandler.setupListeners(document);
 });
 
-window.AtomFormHandler = AtomFormHandler;
+window.AriseFormHandler = AriseFormHandler;
 
 /**
  * Check the form and submit it if it is correct
@@ -122,10 +122,10 @@ async function compute(form, button) {
 
   if (notifyAll) {
     errors.forEach(function (error) {
-      new AtomNotification(`${error.name ?? "Champ incorrect"} : ${error.errorMessage}`, "danger");
+      new AriseNotification(`${error.name ?? "Champ incorrect"} : ${error.errorMessage}`, "danger");
     });
   } else if (!notifyNone) {
-    new AtomNotification("Des erreurs ont été détectées dans le formulaire. Merci de vérifier les données.", "danger");
+    new AriseNotification("Des erreurs ont été détectées dans le formulaire. Merci de vérifier les données.", "danger");
   }
   // Allow the form to be cleared
   addReinitColorListener(form);
@@ -268,7 +268,7 @@ async function compute(form, button) {
 
     let format = item.getAttribute("a-date-format") ?? "d/m/Y";
     if (!/^([d|m|y|Y|h|H|i|s|\-| |:|\/]*)$/.test(format.trim())) {
-      console.warn(`AtomFormHandler: ${format} n'est pas un format valide. Initialisation à la valeur par défaut d/m/Y`);
+      console.warn(`AriseFormHandler: ${format} n'est pas un format valide. Initialisation à la valeur par défaut d/m/Y`);
       format = "d/m/Y";
     }
 
@@ -322,7 +322,7 @@ async function compute(form, button) {
     const alternateVerif = item.getAttribute("a-alternate-verif");
     let format = item.getAttribute("a-phone-format") ?? "XX.XX.XX.XX.XX";
     if (!/^([0|1|2|3|4|5|6|7|8|9|X|-| |+|:|.|\/]*)$/.test(format.trim())) {
-      console.warn(`AtomFormHandler: ${format} n'est pas un format valide. Intitialisation a la valeur par défaut XX.XX.XX.XX.XX`);
+      console.warn(`AriseFormHandler: ${format} n'est pas un format valide. Intitialisation a la valeur par défaut XX.XX.XX.XX.XX`);
       format = "XX.XX.XX.XX.XX";
     }
 

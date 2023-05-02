@@ -213,7 +213,7 @@ title: Tables
 </PreviewAndCopyCode>
 
 
-## Atom DataTables
+## Arise DataTables
 
 
 <PreviewAndCopyCode>
@@ -269,7 +269,7 @@ title: Tables
 
 ```html
 <script>
-	const table = new AtomDatatable(document.getElementById("myTable"), {
+	const table = new AriseDatatable(document.getElementById("myTable"), {
 
 		filterableColumn: [1,2],
         orderableColumn: [1,2,3],
@@ -308,7 +308,7 @@ Options should be passed to DataTable as Object (see exemple above)
 
 ### Redrawing Table
 
-Atom DataTable might be redraw after adding or remove rows manually.
+Arise DataTable might be redraw after adding or remove rows manually.
 
 It will re-rendering pagination, current sorting, maintaining current page if exist or the closer one.
 
@@ -340,7 +340,7 @@ It will re-rendering pagination, current sorting, maintaining current page if ex
 ```html
 <script>
     const table = document.getElementById("myTableRedrawable");
-	const dataTable = new AtomDatatable(table, {
+	const dataTable = new AriseDatatable(table, {
 
         orderableColumn: [0,1],
 		nbPerPage: 4, 

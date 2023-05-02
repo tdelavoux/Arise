@@ -78,56 +78,56 @@
 }
 
 /* ----------------------------------------- ATOM TABS ---------------------------------------------------------------------- */
-.atom-pan-tab-header {
+.arise-pan-tab-header {
   display: flex;
   align-items: center;
   justify-content: flex;
   border-bottom: solid 1px var(--light-border-gray);
 }
-.atom-pan-tab-header-item {
+.arise-pan-tab-header-item {
   padding: 1em 1.5em;
   font-size: 1em;
   color: var(--t-light);
 }
-.atom-pan-tab-header-item.active {
+.arise-pan-tab-header-item.active {
   font-weight: 600;
   color: var(--p-primary);
   border-bottom: solid 2px var(--p-primary);
 }
-.atom-pan-tab-header-item {
+.arise-pan-tab-header-item {
   cursor: pointer;
 }
-.atom-pan-tab-body {
+.arise-pan-tab-body {
   padding: 1em;
 }
-.atom-pan-tab-body > div:not(.active) {
+.arise-pan-tab-body > div:not(.active) {
   display: none;
 }
-.a-tab-secondary .atom-pan-tab-header-item.active {
+.a-tab-secondary .arise-pan-tab-header-item.active {
   color: var(--p-secondary);
   border-bottom: solid 2px var(--p-secondary);
 }
-.a-tab-sucess .atom-pan-tab-header-item.active {
+.a-tab-sucess .arise-pan-tab-header-item.active {
   color: var(--p-sucess);
   border-bottom: solid 2px var(--p-sucess);
 }
-.a-tab-info .atom-pan-tab-header-item.active {
+.a-tab-info .arise-pan-tab-header-item.active {
   color: var(--p-info);
   border-bottom: solid 2px var(--p-info);
 }
-.a-tab-light .atom-pan-tab-header-item.active {
+.a-tab-light .arise-pan-tab-header-item.active {
   color: var(--p-light);
   border-bottom: solid 2px var(--p-light);
 }
-.a-tab-warning .atom-pan-tab-header-item.active {
+.a-tab-warning .arise-pan-tab-header-item.active {
   color: var(--p-warning);
   border-bottom: solid 2px var(--p-warning);
 }
-.a-tab-danger .atom-pan-tab-header-item.active {
+.a-tab-danger .arise-pan-tab-header-item.active {
   color: var(--p-danger);
   border-bottom: solid 2px var(--p-danger);
 }
-.a-tab-dark .atom-pan-tab-header-item.active {
+.a-tab-dark .arise-pan-tab-header-item.active {
   color: var(--t-light);
   border-bottom: solid 2px var(--t-light);
 }

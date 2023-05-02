@@ -4,25 +4,25 @@ title: FormHandler
 
 # {{ $frontmatter.title }}
 
-You can use Atom Form Handler to add client-side controls in your forms. It may use a-input to display errors on fields or AtomNotification for global notifications. 
+You can use Arise Form Handler to add client-side controls in your forms. It may use a-input to display errors on fields or AriseNotification for global notifications. 
 
 ## Basic Usage
 
-AtomFormHandler use classes to identify inputs to coltrol and the type expected (a-verify-XXXX) and the element able to trigger submit (a-form-handler).
+AriseFormHandler use classes to identify inputs to coltrol and the type expected (a-verify-XXXX) and the element able to trigger submit (a-form-handler).
 
 <PreviewAndCopyCode>
 
 ```html
 <form id="basicFormHandler" action="#" class="a-fantom-card p-2" novalidate>
 
-	<h4 class="center">Atom Form</h4>
+	<h4 class="center">Arise Form</h4>
 	<div class="a-input-group">
 		<input class="a-input a-verify-text" placeholder="Michel Del Pêche"/>
 		<label>Text</label>
 	</div>
 
 	<div class="a-input-group">
-		<input class="a-input a-verify-email" placeholder="someone@atom.fr" />
+		<input class="a-input a-verify-email" placeholder="someone@arise.fr" />
 		<label>Email</label>
 	</div>
 
@@ -48,7 +48,7 @@ AtomFormHandler use classes to identify inputs to coltrol and the type expected 
 
     // Manually initialize buttons listeners. 
     //Use it only of elements are not rady after Dom Loading or ajax insertion
-    AtomFormHandler.setupListeners(document.getElementById("basicFormHandler"));
+    AriseFormHandler.setupListeners(document.getElementById("basicFormHandler"));
 
 </script>
 ```
@@ -66,7 +66,7 @@ AtomFormHandler use classes to identify inputs to coltrol and the type expected 
     a-input-notify-none 
     a-data-function='alert("Callback Action used instead form submission")'>
 
-	<h4 class="center">Atom Form</h4>
+	<h4 class="center">Arise Form</h4>
 	<div class="a-input-group a-count-area">
         <textarea class="a-input a-verify-textarea-with-count" 
                     a-name="Comment" 
@@ -105,10 +105,10 @@ AtomFormHandler use classes to identify inputs to coltrol and the type expected 
 
 ```html
 <script>
-    AtomComponents.installCountAreaListeners(document.getElementById('paragraph'));
-    AtomComponents.installCountAreaAutoResizeListener(document.getElementById('paragraph'));
+    AriseComponents.installCountAreaListeners(document.getElementById('paragraph'));
+    AriseComponents.installCountAreaAutoResizeListener(document.getElementById('paragraph'));
 
-    AtomFormHandler.setupListeners(document.getElementById("advancedFormHandler"));
+    AriseFormHandler.setupListeners(document.getElementById("advancedFormHandler"));
 </script>
 ```
 
@@ -117,7 +117,7 @@ AtomFormHandler use classes to identify inputs to coltrol and the type expected 
 
 ## Setup Handler
 
-Atom FormHandler use `a-form-handler` as a triger detection and apply his listeners on his closest `form` elements.
+Arise FormHandler use `a-form-handler` as a triger detection and apply his listeners on his closest `form` elements.
 
 ```html
 <!--

@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/31383617/177853237-63dafe5a-f3ff-4eb8-a9a1-1359a1825cc2.png"  width="250" height="250">
+  <!-- <img src="https://user-images.githubusercontent.com/31383617/177853237-63dafe5a-f3ff-4eb8-a9a1-1359a1825cc2.png"  width="250" height="250"> -->
 </div>
 
 <p align="center">
   Light front-end framework designed for faster web developments.
   <br>
-  <a href="https://atom-documentation.netlify.app"><strong>Explore online documentation</strong></a>
+  <strong>Explore online documentation</strong>
 </p>
 
 ## Contributing

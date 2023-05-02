@@ -4,7 +4,7 @@ title: Texts
 
 # {{ $frontmatter.title }}
 
-## Atom Texts
+## Arise Texts
 
 <PreviewAndCopyCode>
 

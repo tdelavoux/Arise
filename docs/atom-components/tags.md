@@ -1,5 +1,5 @@
 ---
-title: Atom Tags
+title: Arise Tags
 ---
 
 # {{ $frontmatter.title }}

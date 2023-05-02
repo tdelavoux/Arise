@@ -6,7 +6,7 @@ title: Notifications
 
 ## Basic Usage
 
-Throw a new notification with `new AtomNotification("Text to display", {Options})`
+Throw a new notification with `new AriseNotification("Text to display", {Options})`
 
 <PreviewAndCopyCode>
 
@@ -17,7 +17,7 @@ Throw a new notification with `new AtomNotification("Text to display", {Options}
 ```html
 <script>
     document.getElementById('basic-notification-button').addEventListener("click", () => {
-        new AtomNotification('Hey! You have been notified 😀');
+        new AriseNotification('Hey! You have been notified 😀');
     });
 </script>
 ```
@@ -43,7 +43,7 @@ Throw a new notification with `new AtomNotification("Text to display", {Options}
 <script>
     [...document.getElementsByClassName('notification-button')].forEach((el) => {
         el.addEventListener("click", (e) => {
-            new AtomNotification(`${el.dataset.icon} I am a ${el.dataset.type} notification`, {
+            new AriseNotification(`${el.dataset.icon} I am a ${el.dataset.type} notification`, {
                 type: el.dataset.type,
             });
         });
@@ -56,7 +56,7 @@ Throw a new notification with `new AtomNotification("Text to display", {Options}
 
 ### Notifications Options
 
-Options should be passed to AtomNotification's constructor as Object (see exemple above)
+Options should be passed to AriseNotification's constructor as Object (see exemple above)
 
 | Name                  | Type    | Description                                                                                                 | Default Value |
 | --------------------- | ------- | ----------------------------------------------------------------------------------------------------------- | ------------- |
@@ -76,7 +76,7 @@ Don't want to specify a basic configuration at every notification in your applic
 Configure once, Enjoy all along 💪
 
 ```js
-AtomNotification.setGlobalConfiguration({
+AriseNotification.setGlobalConfiguration({
     type: danger,
     clickToHide: false,
     autoHideDelay: 2000,
@@ -99,7 +99,7 @@ AtomNotification.setGlobalConfiguration({
 ```html
 <script>
     document.getElementById('custom-button').addEventListener("click", (el) => {
-        new AtomNotification(el.target.dataset.text, {
+        new AriseNotification(el.target.dataset.text, {
             autoHide: false,
             alignment: "br",
             customClass: "a-docs-custom-notification"
@@ -120,7 +120,7 @@ You may want to limit the number of notifications displayed on a single Wrapper 
 </div>
 
 ```js
-AtomNotificationWrapper.setGlobalConfig({
+AriseNotificationWrapper.setGlobalConfig({
     maxElements: 5,
 });
 ```

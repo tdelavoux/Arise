@@ -1,10 +1,10 @@
 ---
-title: Atom Buttons
+title: Arise Buttons
 ---
 
 # {{ $frontmatter.title }}
 
-## Basic Atom Buttons
+## Basic Arise Buttons
 
 <PreviewAndCopyCode>
 
@@ -128,7 +128,7 @@ title: Atom Buttons
 
 ## Customizing colors
 
-All buttons colors might be overwritten by changing Atom css var but be aware this action will influence all of the components sharing same type (primary, secondary ... etc).
+All buttons colors might be overwritten by changing Arise css var but be aware this action will influence all of the components sharing same type (primary, secondary ... etc).
 
 Please, check the [Customize section](../advanced/customize) for more informations
 
