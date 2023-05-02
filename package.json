@@ -1,0 +1,58 @@
+{
+  "name": "atom",
+  "version": "0.3.0-dev",
+  "description": "Small CSS and JS librairies ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdelavoux/Atom.git"
+  },
+  "keywords": [
+    "css",
+    "javascript",
+    "forms"
+  ],
+  "author": "Thibault Delavoux <thibault.delavoux@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/tdelavoux/Atom/issues"
+  },
+  "homepage": "https://github.com/tdelavoux/Atom#readme",
+  "scripts": {
+    "clean": "rm -rvf dist/",
+    "build": "grunt",
+    "build:js": "grunt uglify",
+    "build:css": "grunt sass",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write src/**/*.{js,scss}",
+    "format:check": "prettier --check src/**/*.{js,scss}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "dev": "concurrently \"npm run docs:dev\" \"grunt watch-js\"",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "npm run build; vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "flexsearch": "^0.7.31",
+    "grunt": "^1.5.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^5.2.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1",
+    "markdown-it": "^13.0.1",
+    "prettier": "^2.6.2",
+    "sass": "^1.52.3",
+    "vitepress": "1.0.0-alpha.33",
+    "vitepress-plugin-search": "^1.0.4-alpha.17"
+  },
+  "lint-staged": {
+    "src/js/*.js": "prettier --write",
+    "src/css/*.scss": "prettier --write"
+  }
+}

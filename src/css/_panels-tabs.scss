@@ -1,0 +1,133 @@
+/* ---------------------- PANELS --------------------------------------- */
+.a-panel {
+  margin: 1em 0;
+  width: 100%;
+}
+.a-panel-header {
+  color: var(--white);
+  font-size: 15px;
+}
+.a-panel-header,
+.a-panel-content {
+  padding: 1em;
+}
+.a-panel,
+.a-panel-header {
+  border-radius: 5px 5px 0 0;
+}
+.a-panel.a-panel-primary .a-panel-header {
+  color: var(--t-primary);
+  background-color: var(--h-primary);
+}
+.a-panel.a-panel-secondary .a-panel-header {
+  color: var(--t-secondary);
+  background-color: var(--h-secondary);
+}
+.a-panel.a-panel-success .a-panel-header {
+  background-color: var(--h-sucess);
+  color: var(--t-sucess);
+}
+.a-panel.a-panel-danger .a-panel-header {
+  background-color: var(--h-danger);
+  color: var(--t-danger);
+}
+.a-panel.a-panel-warning .a-panel-header {
+  background-color: var(--h-warning);
+  color: var(--t-warning);
+}
+.a-panel.a-panel-info .a-panel-header {
+  background-color: var(--h-info);
+  color: var(--t-info);
+}
+.a-panel.a-panel-light .a-panel-header {
+  color: var(--t-light);
+  background-color: var(--h-light);
+}
+.a-panel.a-panel-dark .a-panel-header {
+  color: var(--h-light);
+  background-color: var(--t-light);
+}
+.a-panel-content {
+  border: solid 1px var(--light-border-gray);
+  border-top: none;
+}
+
+.a-panel-collapsable .a-panel-header.a-collapse-trigger {
+  cursor: pointer;
+  display: flex;
+
+  &::after {
+    font-family: "Font Awesome 6 Free";
+    content: "\f146";
+    font-weight: 900;
+
+    opacity: 0.6;
+
+    margin-left: auto;
+  }
+
+  &.a-collapse-triggered::after {
+    content: "\f0fe";
+  }
+}
+
+.a-panel-footer {
+  padding: 1em;
+  border: solid 1px var(--light-border-gray);
+  border-top: none;
+}
+
+/* ----------------------------------------- ATOM TABS ---------------------------------------------------------------------- */
+.atom-pan-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex;
+  border-bottom: solid 1px var(--light-border-gray);
+}
+.atom-pan-tab-header-item {
+  padding: 1em 1.5em;
+  font-size: 1em;
+  color: var(--t-light);
+}
+.atom-pan-tab-header-item.active {
+  font-weight: 600;
+  color: var(--p-primary);
+  border-bottom: solid 2px var(--p-primary);
+}
+.atom-pan-tab-header-item {
+  cursor: pointer;
+}
+.atom-pan-tab-body {
+  padding: 1em;
+}
+.atom-pan-tab-body > div:not(.active) {
+  display: none;
+}
+.a-tab-secondary .atom-pan-tab-header-item.active {
+  color: var(--p-secondary);
+  border-bottom: solid 2px var(--p-secondary);
+}
+.a-tab-sucess .atom-pan-tab-header-item.active {
+  color: var(--p-sucess);
+  border-bottom: solid 2px var(--p-sucess);
+}
+.a-tab-info .atom-pan-tab-header-item.active {
+  color: var(--p-info);
+  border-bottom: solid 2px var(--p-info);
+}
+.a-tab-light .atom-pan-tab-header-item.active {
+  color: var(--p-light);
+  border-bottom: solid 2px var(--p-light);
+}
+.a-tab-warning .atom-pan-tab-header-item.active {
+  color: var(--p-warning);
+  border-bottom: solid 2px var(--p-warning);
+}
+.a-tab-danger .atom-pan-tab-header-item.active {
+  color: var(--p-danger);
+  border-bottom: solid 2px var(--p-danger);
+}
+.a-tab-dark .atom-pan-tab-header-item.active {
+  color: var(--t-light);
+  border-bottom: solid 2px var(--t-light);
+}

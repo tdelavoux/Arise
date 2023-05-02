@@ -1,0 +1,21 @@
+name: Check format and build
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install deps
+        run: npm install
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Building test
+        run: npm run build
